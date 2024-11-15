@@ -1,27 +1,27 @@
 import { siteConfig } from '@/config'
-import SectionHeading from '../ui/SectionHeading'
-import FadeUp from '../ui/FadeUp'
+import SectionHeading from '@/components/ui/SectionHeading'
 import SkillBadge from '../ui/SkillBadge'
+import Animate from '../ui/Animate'
 
 export default function About() {
   const paragraphs = siteConfig.bio.split('\n').filter(p => p.trim())
 
   return (
     <section id="about" className="py-20 max-w-3xl mx-auto">
-      <FadeUp delay={300}>
+      <Animate animation="fadeUp" delay={300}>
         <SectionHeading number="01." title="About Me" />
-      </FadeUp>
+      </Animate>
 
       <div className="space-y-8 text-light-slate">
-        <FadeUp delay={500}>
+        <Animate animation="fadeUp" delay={500}>
           <div className="space-y-4">
             {paragraphs.map((paragraph, i) => (
               <p key={i}>{paragraph.trim()}</p>
             ))}
           </div>
-        </FadeUp>
+        </Animate>
 
-        <FadeUp delay={700}>
+        <Animate animation="fadeUp" delay={700}>
           <div className="space-y-12">
             <div className="space-y-8">
               <div>
@@ -55,7 +55,7 @@ export default function About() {
               </div>
             </div>
           </div>
-        </FadeUp>
+        </Animate>
       </div>
     </section>
   )

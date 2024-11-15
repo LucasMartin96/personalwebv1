@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { siteConfig } from '@/config'
-import FadeIn from '../ui/FadeIn'
+import Animate from '../ui/Animate'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -37,19 +37,19 @@ export default function Navbar() {
       `}
     >
       <nav className="px-6 lg:px-24 mx-auto max-w-7xl h-20 flex items-center justify-between">
-        <FadeIn delay={100} direction="down">
+        <Animate animation="fadeDown" delay={100}>
           <Link 
             href="/" 
             className="text-green font-mono text-2xl hover:text-green/80 transition-colors"
           >
             Lucas Martin
           </Link>
-        </FadeIn>
+        </Animate>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {siteConfig.navLinks.map(({ name, url }, i) => (
-            <FadeIn key={i} delay={100 + ((i + 1) * 100)} direction="down">
+            <Animate key={i} animation="fadeDown" delay={100 + ((i + 1) * 100)}>
               <Link
                 href={url}
                 className="text-light-slate hover:text-green transition-colors duration-300"
@@ -57,9 +57,9 @@ export default function Navbar() {
                 <span className="font-mono text-green text-sm">{`0${i + 1}.`}</span>
                 <span className="ml-1">{name}</span>
               </Link>
-            </FadeIn>
+            </Animate>
           ))}
-          <FadeIn delay={600} direction="down">
+          <Animate animation="fadeDown" delay={600}>
             <a
               href={siteConfig.resumeUrl}
               className="border border-green text-green px-4 py-2 rounded hover:bg-green/10 transition-colors duration-300"
@@ -69,7 +69,7 @@ export default function Navbar() {
             >
               Resume
             </a>
-          </FadeIn>
+          </Animate>
         </div>
 
         {/* Mobile Menu Button */}

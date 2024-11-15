@@ -1,10 +1,10 @@
-import FadeIn from './ui/FadeIn'
 import { siteConfig } from '@/config'
+import Animate from './ui/Animate'
 
 export default function EmailLink() {
   return (
     <div className="fixed bottom-0 right-6 left-auto">
-      <FadeIn delay={1800} direction="left">
+      <Animate animation="fadeLeft" delay={1800}>
         <div className="flex flex-col items-center space-y-6">
           <a
             href={`mailto:${siteConfig.email}`}
@@ -14,7 +14,7 @@ export default function EmailLink() {
           </a>
           <div className="w-px h-24 bg-light-slate"></div>
         </div>
-      </FadeIn>
+      </Animate>
     </div>
   )
 } 

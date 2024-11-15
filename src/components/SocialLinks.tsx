@@ -1,12 +1,12 @@
-import FadeIn from './ui/FadeIn'
 import { siteConfig } from '@/config'
+import Animate from './ui/Animate'
 
 export default function SocialLinks() {
   return (
     <div className="fixed bottom-0 left-6 right-auto">
       <div className="flex flex-col items-center space-y-6">
         {siteConfig.socialLinks.map(({ url, icon: Icon }, i) => (
-          <FadeIn key={i} delay={1300 + (i * 100)} direction="right">
+          <Animate key={i} animation="fadeRight" delay={1300 + (i * 100)}>
             <a
               href={url}
               target="_blank"
@@ -15,11 +15,11 @@ export default function SocialLinks() {
             >
               <Icon className="w-5 h-5" />
             </a>
-          </FadeIn>
+          </Animate>
         ))}
-        <FadeIn delay={1800} direction="right">
+        <Animate animation="fadeRight" delay={1800}>
           <div className="w-px h-24 bg-light-slate"></div>
-        </FadeIn>
+        </Animate>
       </div>
     </div>
   )

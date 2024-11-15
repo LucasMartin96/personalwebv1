@@ -1,24 +1,34 @@
-import { Personal, Project, Job, Skill, Language, SocialLink, NavLink, Contact } from '@/types/config'
+import { personal } from './site/personal'
+import { navLinks } from './site/navigation'
+import { contact } from './site/contact'
 
-import { personal } from './personal'
-import { navLinks } from './navigation'
+import { projects } from './content/projects'
+import { jobs } from './content/jobs'
+
+import { mainSkills, secondarySkills } from './skills/skills'
+import { languages } from './skills/languages'
+
 import { socialLinks } from './social'
-import { projects } from './projects'
-import { jobs } from './jobs'
-import { contact } from './contact'
-import { languages } from './languages'
-import { secondarySkills, mainSkills } from './skills'  
 
 export const siteConfig = {
   ...personal,
-  navLinks,
-  socialLinks,
+  navLinks: navLinks,
   projects,
   jobs,
-  contact,
-  languages,
+  mainSkills,
   secondarySkills,
-  mainSkills
+  languages,
+  contact,
+  socialLinks,
 } as const
 
 export type SiteConfig = typeof siteConfig
+
+export * from './site/personal'
+export * from './site/navigation'
+export * from './site/contact'
+export * from './content/projects'
+export * from './content/jobs'
+export * from './skills/skills'
+export * from './skills/languages'
+export * from './social'
