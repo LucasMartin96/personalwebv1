@@ -1,4 +1,3 @@
-import { IconType } from 'react-icons'
 import { SkillBadgeProps } from '@/types/components'
 
 export default function SkillBadge({ name, icon: Icon }: SkillBadgeProps) {

@@ -1,20 +1,20 @@
 import { siteConfig } from '@/config'
 import SectionHeading from '../ui/SectionHeading'
-import FadeUp from '../ui/FadeUp'
+import Animate from '../ui/Animate'
 import LanguageBadge from '../ui/LanguageBadge'
 
 export default function Languages() {
   return (
-    <section id="languages" className="py-20 max-w-2xl mx-auto">
-      <FadeUp delay={300}>
+    <section className="py-20 max-w-3xl mx-auto">
+      <Animate animation="fadeUp" delay={300}>
         <SectionHeading number="05." title="Languages" />
-      </FadeUp>
-      
-      <div className="mt-8 flex flex-wrap gap-4">
+      </Animate>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
         {siteConfig.languages.map((language, i) => (
-          <FadeUp key={language.name} delay={500 + (i * 100)}>
+          <Animate key={i} animation="fadeUp" delay={500 + (i * 200)}>
             <LanguageBadge language={language} />
-          </FadeUp>
+          </Animate>
         ))}
       </div>
     </section>

@@ -5,18 +5,9 @@ export interface SectionHeadingProps {
   title: string
 }
 
-export interface FadeProps {
-  children: React.ReactNode
-  delay?: number
-}
+export type ProjectCardProps = Project
 
-export interface FadeInProps extends FadeProps {
-  direction?: 'down' | 'up' | 'left' | 'right'
-}
-
-export interface ProjectCardProps extends Project {}
-
-export interface JobPanelProps extends Job {}
+export type JobPanelProps = Job
 
 export interface SkillBadgeProps {
   name: string
