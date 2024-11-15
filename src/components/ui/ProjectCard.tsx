@@ -1,14 +1,5 @@
+import { ProjectCardProps } from '@/types/components'
 import { GithubIcon, ExternalLinkIcon, MateIcon, AlgoIcon } from './icons'
-
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  tech: string[];
-  github?: string | { frontend: string; backend: string };
-  external?: string;
-  highlights: string[];
-  icon?: "mate" | "algo";
-}
 
 export default function ProjectCard({
   title,

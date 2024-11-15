@@ -1,4 +1,6 @@
-export const personal = {
+import { Personal } from '@/types/config'
+
+export const personal: Personal = {
   name: "Lucas MARTIN",
   role: "Full-Stack Developer",
   email: "lucasmartin766@gmail.com",

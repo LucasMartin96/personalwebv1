@@ -1,7 +1,4 @@
-interface SectionHeadingProps {
-  number: string;
-  title: string;
-}
+import { SectionHeadingProps } from '@/types/components'
 
 export default function SectionHeading({ number, title }: SectionHeadingProps) {
   return (

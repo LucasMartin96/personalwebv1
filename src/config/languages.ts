@@ -1,4 +1,6 @@
-export const languages = [
+import { Language } from '@/types/config'
+
+export const languages: Language[] = [
   {
     name: "Spanish",
     flag: "🇪🇸",

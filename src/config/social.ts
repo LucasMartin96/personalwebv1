@@ -1,6 +1,7 @@
+import { SocialLink } from '@/types/config'
 import { FiGithub, FiLinkedin } from 'react-icons/fi'
 
-export const socialLinks = [
+export const socialLinks: SocialLink[] = [
   {
     name: 'GitHub',
     url: 'https://github.com/LucasMartin96',

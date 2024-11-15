@@ -1,9 +1,5 @@
 import { IconType } from 'react-icons'
-
-interface SkillBadgeProps {
-  name: string
-  icon: IconType
-}
+import { SkillBadgeProps } from '@/types/components'
 
 export default function SkillBadge({ name, icon: Icon }: SkillBadgeProps) {
   return (

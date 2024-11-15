@@ -1,11 +1,11 @@
-interface JobPanelProps {
-  title: string;
-  company: string;
-  period: string;
-  description: string[];
-}
+import { JobPanelProps } from '@/types/components'
 
-export default function JobPanel({ title, company, period, description }: JobPanelProps) {
+export default function JobPanel({ 
+  title, 
+  company, 
+  period, 
+  description 
+}: JobPanelProps) {
   return (
     <div className="space-y-4">
       <h3 className="text-xl text-lightest-slate">

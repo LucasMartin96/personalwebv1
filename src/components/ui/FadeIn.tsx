@@ -1,11 +1,6 @@
 'use client'
 import { useEffect, useRef } from 'react'
-
-interface FadeInProps {
-  children: React.ReactNode
-  delay?: number
-  direction?: 'down' | 'up' | 'left' | 'right'
-}
+import { FadeInProps } from '@/types/components'
 
 export default function FadeIn({ children, delay = 0, direction = 'down' }: FadeInProps) {
   const elementRef = useRef<HTMLDivElement>(null)

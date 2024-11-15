@@ -1,3 +1,5 @@
+import { Personal, Project, Job, Skill, Language, SocialLink, NavLink, Contact } from '@/types/config'
+
 import { personal } from './personal'
 import { navLinks } from './navigation'
 import { socialLinks } from './social'
@@ -17,7 +19,6 @@ export const siteConfig = {
   languages,
   secondarySkills,
   mainSkills
-}
+} as const
 
-// Type definitions
-export type SiteConfig = typeof siteConfig 
+export type SiteConfig = typeof siteConfig

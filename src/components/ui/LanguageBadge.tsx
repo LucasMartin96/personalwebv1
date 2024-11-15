@@ -1,11 +1,4 @@
-interface LanguageBadgeProps {
-  language: {
-    name: string
-    flag: string
-    certification: string
-    isNative: boolean
-  }
-}
+import { LanguageBadgeProps } from '@/types/components'
 
 export default function LanguageBadge({ language }: LanguageBadgeProps) {
   return (

@@ -1,4 +1,6 @@
-export const navLinks = [
+import { NavLink } from '@/types/config'
+
+export const navLinks: NavLink[] = [
   {
     name: "About",
     url: "/#about",
