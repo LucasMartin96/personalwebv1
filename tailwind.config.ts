@@ -17,6 +17,35 @@ const config: Config = {
         "light-slate": "#BBBBBB",
         "lightest-slate": "#FFFFFF",
       },
+      keyframes: {
+        fadeIn: {
+          'from': { opacity: '0', transform: 'scale(0.95)' },
+          'to': { opacity: '1', transform: 'scale(1)' },
+        },
+        fadeUp: {
+          'from': { opacity: '0', transform: 'translateY(20px)' },
+          'to': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeDown: {
+          'from': { opacity: '0', transform: 'translateY(-20px)' },
+          'to': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeLeft: {
+          'from': { opacity: '0', transform: 'translateX(20px)' },
+          'to': { opacity: '1', transform: 'translateX(0)' },
+        },
+        fadeRight: {
+          'from': { opacity: '0', transform: 'translateX(-20px)' },
+          'to': { opacity: '1', transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        fadeIn: 'fadeIn 0.5s ease-out forwards',
+        fadeUp: 'fadeUp 0.5s ease-out forwards',
+        fadeDown: 'fadeDown 0.5s ease-out forwards',
+        fadeLeft: 'fadeLeft 0.5s ease-out forwards',
+        fadeRight: 'fadeRight 0.5s ease-out forwards',
+      },
     },
   },
   plugins: [],

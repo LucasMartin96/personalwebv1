@@ -101,3 +101,12 @@ html {
     padding-right: 6rem;
   }
 }
+
+/* Add this at the end of your globals.css */
+.opacity-0 {
+  opacity: 0;
+}
+
+[data-animate] {
+  opacity: 0;
+}
