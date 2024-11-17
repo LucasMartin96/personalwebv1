@@ -3,7 +3,7 @@ import Animate from './ui/Animate'
 
 export default function EmailLink() {
   return (
-    <div className="fixed bottom-0 right-6 left-auto">
+    <div className="fixed bottom-0 right-6 left-auto hidden md:flex">
       <Animate animation="fadeLeft" delay={1800}>
         <div className="flex flex-col items-center space-y-6">
           <a
