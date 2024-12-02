@@ -2,6 +2,8 @@
 
 A modern and responsive software engineering portfolio built with Next.js 14, TypeScript, and Tailwind CSS.
 
+[Visit it!](https://lucasmartin96.github.io/personalwebv1/)
+
 ## 🚀 Features
 
 - Responsive design
